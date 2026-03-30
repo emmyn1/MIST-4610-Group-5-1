@@ -1,5 +1,3 @@
-<img width="883" height="779" alt="image" src="https://github.com/user-attachments/assets/0404938c-1b6b-4f71-be12-5b2b9dcc1ead" /># MIST-4610-Group-5-1
-
 ## Team Members
 1. Catherine Lusick
 2. Emmy Nguyen (https://github.com/emmyn1)
