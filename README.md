@@ -4,7 +4,7 @@
 3. Diyaa Patel
 4. Caleb Rivers 
 
-## Scenario Description
+## Problem Description
 
 ## Data Model
 <img width="1192" height="806" alt="DataModelProj1" src="https://github.com/user-attachments/assets/fa321764-ce20-42be-b435-b8e67da91c53" />
@@ -116,7 +116,19 @@
 | streamQty | INT | Total numnber of streams for a given record | 
 | salesID | INT | Foreign referencing the associated sales record | 
 
+## SQL Queries 
+| Feature                   | Query 1 | Query 2 | Query 3 | Query 4 | Query 5 | Query 6 | Query 7 | Query 8 | Query 9 | Query 10 | 
+|---------------------------|---------|---------|---------|---------|---------|---------|---------|---------|---------|----------|
+| Multiple Table Join       |         |         |         |         |         |         |         |         |         |          |
+| Subquery                  |         |         |         |         |         |         |         |         |         |          |
+| GROUP BY                  |         |         |         |         |         |         |         |         |         |          |
+| GROUP BY with HAVING      |         |         |         |         |         |         |         |         |         |          |
+| Multi-condition WHERE     |         |         |         |         |         |         |         |         |         |          |
+| Built - in Functions      |         |         |         |         |         |         |         |         |         |          |
+| REGEXP                    |         |         |         |         |         |         |         |         |         |          | 
+| NOT EXISTS                |         |         |         |         |         |         |         |         |         |          | 
 
+## Database Information
 
 
 
