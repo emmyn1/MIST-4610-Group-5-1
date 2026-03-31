@@ -13,15 +13,29 @@ The purpose of this relational database is to model a music group that distribut
 ### Explanation of Data Model
 The database features the entities Artist, Artist Group, Album, Song, Producer, Song Producer, Song Record Label, Location, Sales, Total Units, and Streams Total. 
 
-Record Label represents the subsidiary that each artist is signed to. It is the child table of location, as a location could include many record labels. Other attributes include the albums unique identifier, it’s name, the city in which it is headquartered in, and the year it was founded 
+Record Label represents the subsidiary that each artist is signed to. It is the child table of location, as a location could include many record labels. Other attributes include the albums unique identifier, it’s name, the city in which it is headquartered in, and the year it was founded. 
 
-Location represents the relevant areas that house producers, record labels, and artists. Since none of these entities can have more than one location, the entity has no foreign keys. state 
-  - Each Artist has a single Record Label and a single Location 
-  - An Artist may put out more than one Album 
-  - There are several Songs on each Album 
-  - Songs generate streaming data through the Stream Total table 
-  - Unit Total and Sales tables are how albums make money 
-  - A junction table links Producers to Songs  
+Location represents the relevant areas that house producers, record labels, and artists. Since none of these entities can have more than one location, the entity has no foreign keys. A locations state, city, and ZIP code is represented in the model. 
+
+The Artist is the core entity, and has relations with the most amount of other entities in the database. An artist’s attributes include their unique identifier, their stage and legal name, the date of their first album release, their age, and foreign keys connecting them to location and record label, as record labels and locations can have multiple artists. The Artist entity includes both artists that belong to our client’s music group, as well as artists beyond the music group that their artists have collaborated with. 
+
+An artist’s contract outlines what they are required to do in order for their respective labels to promote and distribute their music. Each contract has their unique identifier, their start and end date, the percent of every dollar that the artist gets to keep, the amount of their initial advances, and the amount of albums the artist is required to produce before their contract expertise. Lastly, the only foreign key included is artist ID, as every artist we are observing needs a contract, but not every artist in general has a contact with this specific music group, such as feature artists, which are also included in the model. 
+
+The Album is a sum of songs that are released at one time, and are used to fill contracts by the artists. Albums have their unique identifier which is a combination of artist ID and the release of the album, and are described by their name and their release date. Their foreign keys link them to artist and units sold, as artists can have multiple albums, and multiple albums can have the same amount of units sold.  
+
+Albums are composed of songs, which is also an essential entity in our model. Songs serve as the core product in the form of streams (along with physical vinyl sales), and are essential in determining revenue metrics. Each song has a unique identifier, which is a combination of artist ID, album ID, and the track number of the song. Other attributes include the song name, runtime, genre, and maturity rating, each essential features that can affect the revenue of a track. Foreign keys compose of album ID and stream total, as an album has many songs, and multiple songs can have the same amount of streams. 
+
+Artist Group represents the associative entity between songs and artists, as an artist can have many songs, and an undeniably have many songs, and a song can also have many artists working on it. To accurately model this relationship, we implemented a three-way composite primary key, with each row having a unique combination of group ID, artist ID, and song ID. The only other attribute that is attributed to this entity is group name, which describes each artist that works on a song in one cell.  
+
+In addition to an artist, each song also has a producer that composes the instrumentals and mixes the track. Producer is modeled similarly to artist, with producer ID, producer name, and producer age as it’s independent attributes, and location ID as its foreign key  
+
+Similarly to artists, a producer can work on many songs, and a song can also be composed by many producers. As such, another associative entity, song producer, was made to represent this relationship. The only attributes are its three-way composite primary key consisting of song producer ID, producer ID, and song ID 
+
+The Unit Total Entity was created to represent the amount of physical media (i.e. vinyl and CDs) that an album sells throughout its lifetime. This entity is composed of its unique identifier, the total quantity of units that an album has sold, and a foreign key linking the table to sales, which will be expanded upon below. 
+
+Streams is another avenue for an artist to generate revenue, so this is also modeled in its own entity. However, unlike being related to albums like units total, streams is related to songs, since people can stream songs individually and do not have to listen to an entire album for a stream to register. Streams include a unique identifier, the total quantity of streams generated, and the foreign key linking this entity to sales. 
+
+Lastly, but perhaps most essential, is sales. This is the table that holds the revenue generated from both units sold and streams. Although a relatively simple table, sales offer the most critical data that is found in the database, and can offer the most insight as to what direction the firm needs to move in. Despite only consisting of a unique identifier and the revenue generated by each distribution channel, it is used in many of our queries to determine which artists prove to be most valuable.   
 
 ## Data Dictionary
 
