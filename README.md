@@ -186,7 +186,7 @@ Query 10 is designed to find the names of producers in the Producer table who ha
 |---------------------------|---------|---------|---------|---------|---------|---------|---------|---------|---------|----------|
 | Multiple Table Join       |         |    X    |    X    |    X    |    X    |    X    |    X    |    X    |         |    X     |
 | Subquery                  |         |         |         |    X    |         |         |         |    X    |         |          |
-| GROUP BY                  |         |         |         |         |         |         |    X    |         |         |          |
+| GROUP BY                  |         |         |         |         |         |         |    X    |    X    |         |          |
 | GROUP BY with HAVING      |         |         |         |    X    |         |         |         |         |         |          |
 | Multi-condition WHERE     |         |         |    X    |         |         |         |         |         |         |          |
 | Built - in Functions      |         |    X    |    X    |    X    |    X    |    X    |    X    |    X    |         |          |
