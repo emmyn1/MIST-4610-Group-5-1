@@ -1,5 +1,5 @@
 ## Team Members
-1. Catherine Lusick
+1. Catherine Lusick (https://github.com/cl95728)
 2. Emmy Nguyen (https://github.com/emmyn1)
 3. Diyaa Patel
 4. Caleb Rivers 
@@ -142,12 +142,13 @@ Query 2  retrieves song titles and their total stream counts by joining the Song
 This query allows management to have a better understanding of which songs are currently the most popular among listeners. High streaming numbers indicate strong audience engagement and can guide the company’s promotion decisions. The results can also be utilized to maximize revenues from streaming platforms. 
 
 3. Which albums have sold above 9,000,000 albums?
-Query 3 retrieves album names and total units sold by joining Album and Unit Total tables. It filters for albums exceeding 5,000,000 units and orders them from highest to lowest sales. 
+Query 3 retrieves album names and total units sold by joining Album and Unit Total tables. It filters for albums exceeding 9,000,000 units and orders them from highest to lowest sales. 
 <img width="572" height="527" alt="image" src="https://github.com/user-attachments/assets/f8765f24-3ad1-40be-bd7c-f54947fb62e5" />
 
 This query helps management identify which albums are performing well in terms of sales volume. By focusing on high-selling albums, the label can prioritize its resources for the successful projects. This insight can guide future investment strategies and production decisions. 
 
 4. Which hip hop feature has the most streams?
+<img width="582" height="540" alt="image" src="https://github.com/user-attachments/assets/b897fd12-9e13-4e4e-af9b-d84d73dbb40e" />
 
 
 5. Where should we look for new talent? (Which location generates the most revenue)
@@ -163,10 +164,14 @@ This query helps management identify which albums are performing well in terms o
 
 
 9. Which locations have a city name that ends with “ville” (REGEX)
+<img width="499" height="336" alt="image" src="https://github.com/user-attachments/assets/72f5115c-6b84-4d35-9db0-2c73ce667f44" />
 
+Query 9 was created to pull a list of all cities in the Location table that ends with the letters "ville". To make the list clean and easy to read, I used a Regular Expression to find the pattern and grouped the results by city. This query helps filter through the location data more effectively. Instead of scrolling through rows of data, this helps identify specific areas based on their name.
 
 10. Display producers who have never worked on a song in the Hip Hop genre (NOT EXISTS) 
+<img width="469" height="298" alt="image" src="https://github.com/user-attachments/assets/76b68c18-c9e1-40e5-8afe-d8c20e1f83dd" />
 
+Query 10 is designed to find the names of producers in the Producer table who have never been associated with a "Hip Hop" song. To do this, I used a NOT EXISTS subquery to filter anyone linked to that specific genre. For every producer, the subquery checks the Song Producer table to see if they are linked to any song labeled 'Hip Hop'. If the subquery finds any match, NOT EXISTS becomes false, and that producer is excluded. This logic can be used to isolate producers who work exclusively in other genres like Country or Pop. It’s a great way to find a music producer whose specialty does not fall in Hip Hop. 
 
 
 | Feature                   | Query 1 | Query 2 | Query 3 | Query 4 | Query 5 | Query 6 | Query 7 | Query 8 | Query 9 | Query 10 | 
@@ -177,13 +182,13 @@ This query helps management identify which albums are performing well in terms o
 | GROUP BY with HAVING      |         |         |         |         |         |         |         |         |         |          |
 | Multi-condition WHERE     |         |         |    X    |         |         |         |         |         |         |          |
 | Built - in Functions      |         |    X    |    X    |         |         |         |         |         |         |          |
-| REGEXP                    |         |         |         |         |         |         |         |         |         |          | 
-| NOT EXISTS                |         |         |         |         |         |         |         |         |         |          |
+| REGEXP                    |         |         |         |         |         |         |         |         |    X    |          | 
+| NOT EXISTS                |         |         |         |         |         |         |         |         |         |     X    |
 | WHERE Clause              |    X    |         |         |         |         |         |         |         |         |          |
 | Basic SELECT              |    X    |         |         |         |         |         |         |         |         |          |
 
 ## Database Information
-
+Name of the database: al_Group_21482_G5 
 
 
 
