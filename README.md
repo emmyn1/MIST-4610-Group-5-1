@@ -10,6 +10,7 @@
 <img width="1192" height="806" alt="DataModelProj1" src="https://github.com/user-attachments/assets/fa321764-ce20-42be-b435-b8e67da91c53" />
 
 ### Explanation of Data Model
+The purpose of this relational database is to model a music group that distributes songs and albums from a variety of different artists that are signed to various different subsidiary record labels. The model tracks artists, albums, songs, record labels, contracts, and revenue generated through both streaming and unit sales, with the central entity being the artists, as their products are the source of revenue.  Managers can use the system to assess artist performance, identify high-performing genres and locations, and make strategic choices about talent acquisition, contract management, and marketing. Through querying the database, our team aims to prove that our database is both reliable and useful for helping the executive team gain insight into the current operations of the music group, as well as ensuring that it can be used to make decisions about the future of the firm.
 
 ## Data Dictionary
 
@@ -117,6 +118,19 @@
 | salesID | INT | Foreign referencing the associated sales record | 
 
 ## SQL Queries 
+1. Show all of the albums for a specific artist.
+2. Which songs are the most popular based on streaming?
+3. Which albums have sold above 9,000,000 albums?
+4. Which hip hop feature has the most streams?
+5. Where should we look for new talent? (Which location generates the most revenue)
+6. Do pre or post 2000s albums generate the most sales?
+7. Which record label has released the most albums? 
+8. Which artists have more total album sales than the average total sales of all artists 
+9. Which locations have a city name that ends with “ville” (REGEX)
+10. Display producers who have never worked on a song in the Hip Hop genre (NOT EXISTS) 
+
+
+
 | Feature                   | Query 1 | Query 2 | Query 3 | Query 4 | Query 5 | Query 6 | Query 7 | Query 8 | Query 9 | Query 10 | 
 |---------------------------|---------|---------|---------|---------|---------|---------|---------|---------|---------|----------|
 | Multiple Table Join       |         |         |         |         |         |         |         |         |         |          |
