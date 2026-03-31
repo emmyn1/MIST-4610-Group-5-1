@@ -2,7 +2,7 @@
 1. Catherine Lusick (https://github.com/cl95728/MIST-4610-Group-5-Project-1)
 2. Emmy Nguyen (https://github.com/emmyn1/MIST-4610-Group-5-1)
 3. Diyaa Patel (https://github.com/Diyaa-P13/MIST4610---Project-1-Group-5.git)
-4. Caleb Rivers 
+4. Caleb Rivers (https://github.com/CRivers2805/MIST_4610_21482_G5_CMR) 
 
 ## Scenario Description
 The purpose of this relational database is to model a music group that distributes songs and albums from a variety of different artists that are signed to various different subsidiary record labels. The model tracks artists, albums, songs, record labels, contracts, and revenue generated through both streaming and unit sales, with the central entity being the artists, as their products are the source of revenue.  Managers can use the system to assess artist performance, identify high-performing genres and locations, and make strategic choices about talent acquisition, contract management, and marketing. Through querying the database, our team aims to prove that our database is both reliable and useful for helping the executive team gain insight into the current operations of the music group, as well as ensuring that it can be used to make decisions about the future of the firm.
@@ -150,16 +150,17 @@ This query helps management identify which albums are performing well in terms o
 4. Which hip hop feature has the most streams?
 <img width="582" height="540" alt="image" src="https://github.com/user-attachments/assets/b897fd12-9e13-4e4e-af9b-d84d73dbb40e" />
 
+This query is meant to identify which hip hop group feature generates the largest number of streams. Some groups have multiple collaborations, so for more accurate results, the total streams earned by each group are divided by the number of songs they have in the database. As shown in the results, J Cole and Trey Songz have garnered the most streams per song, so it would be wise to get both artists back into the studio to produce another hit. Additionally, JID’s features make up most of the top 50%, so he seems to work well with other artists. Lastly, Kendrick Lamar’s features tend to lack streams, so maybe the label should encourage him to stick to solo work. 
 
 5. Where should we look for new talent? (Which location generates the most revenue)
 <img width="682" height="424" alt="image" src="https://github.com/user-attachments/assets/e5f3c581-04b3-4061-ac98-74e800fb7bb4" />
 
-
+This query is meant to give insight on which cities generate the most revenue per artist. By joining many tables across the database, we can attach revenue values to all of the locations in our database. Additionally, dividing by artist creates less skewed data, as the cities with more artists will not be overrepresented. As seen in the results, Chapel Hill, Duluth, Houston, and Charleston have shown massive returns for their respective artists, so perhaps the culture and connections these artists can create in their cities can allow for similar artists from their area to develop and follow in their footsteps. Therefore, more resources should be given to talent scouts and local development in those areas. 
 
 6. Do pre or post 2000s albums generate the most sales?
 <img width="590" height="426" alt="image" src="https://github.com/user-attachments/assets/b2cfa90b-3ec2-4d70-83a5-595eef353904" />
 
-
+This query displays the dichotomy of the revenue generated from albums before and after the year 2000. By using the UNION command, we can observe both calculations side by side. REGEXP was used to distinguish between albums made before and after the turn of the millennium. The results state that pre-2000s albums still have generated more money per album on average than post 2000s albums. This should alert management that they need to keep these albums available for purchase and to not phase them out. It would also be wise to renew contracts of artists that made music in the 1900s, as they not only drove up sales, but they have a positive reputation amongst the public. This isn’t to say that newer artists should not be prioritized, as their sales numbers are very close to those of the older albums, however management should not ignore the lasting impact that older works have created. 
 
 7. Which record label has released the most albums? 
 <img width="403" height="391" alt="image" src="https://github.com/user-attachments/assets/c3c59e79-c2bb-4955-bd2d-c5b3674fcaae" />
@@ -186,14 +187,14 @@ Query 10 is designed to find the names of producers in the Producer table who ha
 |---------------------------|---------|---------|---------|---------|---------|---------|---------|---------|---------|----------|
 | Multiple Table Join       |         |    X    |    X    |    X    |    X    |    X    |    X    |    X    |         |     X    |
 | Subquery                  |         |         |         |         |         |         |         |    X    |         |          |
-| GROUP BY                  |         |         |         |         |         |         |    X    |    X    |         |          |
+| GROUP BY                  |         |         |         |         |    X    |         |    X    |    X    |         |          |
 | GROUP BY with HAVING      |         |         |         |    X    |         |         |         |         |         |          |
 | Multi-condition WHERE     |         |         |    X    |         |         |         |         |         |         |          |
 | Built - in Functions      |         |    X    |    X    |    X    |    X    |    X    |    X    |    X    |         |          |
 | REGEXP                    |         |         |         |         |         |    X    |         |         |    X    |          | 
 | NOT EXISTS                |         |         |         |         |         |         |         |         |         |     X    |
-| WHERE Clause              |    X    |         |         |         |         |         |         |         |         |          |
-| Basic SELECT              |    X    |         |         |         |         |         |         |         |         |          |
+| WHERE Clause              |    X    |         |         |    X    |         |    X    |         |         |         |          |
+| Basic SELECT              |    X    |         |         |    X    |    X    |    X    |         |         |         |          |
 | Union                     |         |         |         |         |         |    X    |         |         |         |          |
 
 ## Database Information
