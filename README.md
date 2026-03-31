@@ -184,7 +184,7 @@ Query 10 is designed to find the names of producers in the Producer table who ha
 
 | Feature                   | Query 1 | Query 2 | Query 3 | Query 4 | Query 5 | Query 6 | Query 7 | Query 8 | Query 9 | Query 10 | 
 |---------------------------|---------|---------|---------|---------|---------|---------|---------|---------|---------|----------|
-| Multiple Table Join       |         |    X    |    X    |    X    |    X    |    X    |    X    |    X    |         |          |
+| Multiple Table Join       |         |    X    |    X    |    X    |    X    |    X    |    X    |    X    |         |    X     |
 | Subquery                  |         |         |         |    X    |         |         |         |    X    |         |          |
 | GROUP BY                  |         |         |         |         |         |         |    X    |         |         |          |
 | GROUP BY with HAVING      |         |         |         |    X    |         |         |         |         |         |          |
