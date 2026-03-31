@@ -1,5 +1,5 @@
 ## Team Members
-1. Catherine Lusick (https://github.com/cl95728)
+1. Catherine Lusick (https://github.com/cl95728/MIST-4610-Group-5-Project-1)
 2. Emmy Nguyen (https://github.com/emmyn1/MIST-4610-Group-5-1)
 3. Diyaa Patel (https://github.com/Diyaa-P13/MIST4610---Project-1-Group-5.git)
 4. Caleb Rivers 
