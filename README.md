@@ -1,7 +1,7 @@
 ## Team Members
 1. Catherine Lusick (https://github.com/cl95728)
 2. Emmy Nguyen (https://github.com/emmyn1)
-3. Diyaa Patel
+3. Diyaa Patel (https://github.com/Diyaa-P13/MIST4610---Project-1-Group-5.git)
 4. Caleb Rivers 
 
 ## Scenario Description
@@ -158,10 +158,14 @@ This query helps management identify which albums are performing well in terms o
 
 
 7. Which record label has released the most albums? 
+<img width="403" height="391" alt="image" src="https://github.com/user-attachments/assets/c3c59e79-c2bb-4955-bd2d-c5b3674fcaae" />
 
+This query calculates the total number of albums released by each record label by joining the Album, Artist, and Record Label tables. It organizes the data by record label and counts the number of albums linked to each label, and then it arranges the results in descending order. This query assists management in determining which record labels are generating the most albums. Being able to identify which label is effectively, provides insight into overall label performance and market presence. This data can help make decisions about investments, resource distribution, and collaborations with successful labels.  
 
 8. Which artists have more total album sales than the average total sales of all artists 
+<img width="719" height="327" alt="image" src="https://github.com/user-attachments/assets/291eb264-03b5-4dc7-a3da-190ef2f03c75" />
 
+This query calculates the total album sales for each artist by joining the Artist, Album, and Unit total tables. By comparing, each artist’s total sales to the average total sales across all artists using a subquery, it returns only those artists whose sales are higher than the average. This query assists management in determining artists who are exceeding average sales performance. These insights can help make decisions regarding marketing spending, resource distribution, contract extensions, and focusing on top-performing artists within the company.  
 
 9. Which locations have a city name that ends with “ville” (REGEX)
 <img width="499" height="336" alt="image" src="https://github.com/user-attachments/assets/72f5115c-6b84-4d35-9db0-2c73ce667f44" />
@@ -176,13 +180,13 @@ Query 10 is designed to find the names of producers in the Producer table who ha
 
 | Feature                   | Query 1 | Query 2 | Query 3 | Query 4 | Query 5 | Query 6 | Query 7 | Query 8 | Query 9 | Query 10 | 
 |---------------------------|---------|---------|---------|---------|---------|---------|---------|---------|---------|----------|
-| Multiple Table Join       |         |    X    |    X    |         |         |         |         |         |         |          |
-| Subquery                  |         |         |         |         |         |         |         |         |         |          |
-| GROUP BY                  |         |         |         |         |         |         |         |         |         |          |
-| GROUP BY with HAVING      |         |         |         |         |         |         |         |         |         |          |
+| Multiple Table Join       |         |    X    |    X    |    X    |    X    |    X    |    X    |    X    |         |          |
+| Subquery                  |         |         |         |    X    |         |         |         |    X    |         |          |
+| GROUP BY                  |         |         |         |         |         |         |    X    |         |         |          |
+| GROUP BY with HAVING      |         |         |         |    X    |         |         |         |         |         |          |
 | Multi-condition WHERE     |         |         |    X    |         |         |         |         |         |         |          |
-| Built - in Functions      |         |    X    |    X    |         |         |         |         |         |         |          |
-| REGEXP                    |         |         |         |         |         |         |         |         |    X    |          | 
+| Built - in Functions      |         |    X    |    X    |    X    |    X    |    X    |    X    |    X    |         |          |
+| REGEXP                    |         |         |         |         |         |    X    |         |         |    X    |          | 
 | NOT EXISTS                |         |         |         |         |         |         |         |         |         |     X    |
 | WHERE Clause              |    X    |         |         |         |         |         |         |         |         |          |
 | Basic SELECT              |    X    |         |         |         |         |         |         |         |         |          |
