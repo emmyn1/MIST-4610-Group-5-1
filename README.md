@@ -130,14 +130,38 @@ Location represents the relevant areas that house producers, record labels, and 
 
 ## SQL Queries 
 1. Show all of the albums for a specific artist.
+Query 1 retrieves album names and release dates for a specific artist by filtering the Album table using the artist’s ID. It provides a simple view of the artist’s discography. 
+<img width="494" height="422" alt="image" src="https://github.com/user-attachments/assets/8f59d9cd-2b94-4c30-bbd1-831f760cf593" />
+This query gives management quick access to an artist’s portfolio of work and track their release history. Understanding an artist’s output is important for planning future releases and activities. It also provides an idea of an artist’s content production and an overview of their career progression. 
+
 2. Which songs are the most popular based on streaming?
+Query 2  retrieves song titles and their total stream counts by joining the Song and Stream Total tables. It ranks songs in descending order and returns the top 10 most-streamed tracks.
+<img width="637" height="455" alt="image" src="https://github.com/user-attachments/assets/f89a0daa-434a-4387-8344-65d8a4014b0b" />
+This query allows management to have a better understanding of which songs are currently the most popular among listeners. High streaming numbers indicate strong audience engagement and can guide the company’s promotion decisions. The results can also be utilized to maximize revenues from streaming platforms. 
+
 3. Which albums have sold above 9,000,000 albums?
+Query 3 retrieves album names and total units sold by joining Album and Unit Total tables. It filters for albums exceeding 5,000,000 units and orders them from highest to lowest sales. 
+<img width="572" height="527" alt="image" src="https://github.com/user-attachments/assets/f8765f24-3ad1-40be-bd7c-f54947fb62e5" />
+This query helps management identify which albums are performing well in terms of sales volume. By focusing on high-selling albums, the label can prioritize its resources for the successful projects. This insight can guide future investment strategies and production decisions. 
+
 4. Which hip hop feature has the most streams?
+
+
 5. Where should we look for new talent? (Which location generates the most revenue)
+
+
 6. Do pre or post 2000s albums generate the most sales?
+
+
 7. Which record label has released the most albums? 
+
+
 8. Which artists have more total album sales than the average total sales of all artists 
+
+
 9. Which locations have a city name that ends with “ville” (REGEX)
+
+
 10. Display producers who have never worked on a song in the Hip Hop genre (NOT EXISTS) 
 
 
