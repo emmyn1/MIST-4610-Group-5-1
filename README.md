@@ -152,9 +152,13 @@ This query helps management identify which albums are performing well in terms o
 
 
 5. Where should we look for new talent? (Which location generates the most revenue)
+<img width="682" height="424" alt="image" src="https://github.com/user-attachments/assets/e5f3c581-04b3-4061-ac98-74e800fb7bb4" />
+
 
 
 6. Do pre or post 2000s albums generate the most sales?
+<img width="590" height="426" alt="image" src="https://github.com/user-attachments/assets/b2cfa90b-3ec2-4d70-83a5-595eef353904" />
+
 
 
 7. Which record label has released the most albums? 
